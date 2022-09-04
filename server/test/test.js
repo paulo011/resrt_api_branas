@@ -18,4 +18,8 @@ test('Should get posts',async ()=> {
   const posts = response.data
 
   expect(posts).toHaveLength(3)
+  await postsService.deletePost(post1.id)
+  await postsService.deletePost(post2.id)
+  await postsService.deletePost(post3.id)
+
 })
